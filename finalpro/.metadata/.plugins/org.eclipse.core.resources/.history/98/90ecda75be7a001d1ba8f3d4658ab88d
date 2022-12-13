@@ -1,0 +1,13 @@
+package com.example.demo.repository;
+
+import java.util.List;
+
+
+
+public interface IKartukeluargaRepo {
+	public Kartutkeluarga insertKartu(Kartukeluarga kartukeluarga);
+	public List<Kartukeluarga> getAllKartu();
+	public Kartukeluarga updateKartu(int id, Kartukeluarga kartukeluarga);
+	public Kartukeluarga deleteKartu(int id);
+
+}
