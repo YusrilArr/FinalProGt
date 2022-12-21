@@ -40,4 +40,10 @@ public class UserService implements IUserService {
 		return userRepo.deleteUser(id);
 	}
 
+	@Override
+	public User getUser(String email, String password) {
+		// TODO Auto-generated method stub
+		return userRepo.getUser(email, password);
+	}
+
 }

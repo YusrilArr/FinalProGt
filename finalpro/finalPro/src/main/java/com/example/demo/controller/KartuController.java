@@ -17,7 +17,7 @@ import com.example.demo.model.Kartukeluarga;
 import com.example.demo.service.IKartuService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:8080")
 @RequestMapping("/api/kartu")
 public class KartuController {
 	
@@ -42,6 +42,11 @@ public class KartuController {
 	@DeleteMapping("/delete_kartu/{id}")
 	public Kartukeluarga deleteKartu(@PathVariable int id) {
 		return kartuService.deleteKartu(id);
+	}
+	
+	@GetMapping("/getKK/{id}")
+	public Kartukeluarga getKK(@PathVariable int id) {
+		return kartuService.getKK(id);
 	}
 
 }

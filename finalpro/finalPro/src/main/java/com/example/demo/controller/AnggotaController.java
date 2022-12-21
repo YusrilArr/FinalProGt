@@ -17,7 +17,7 @@ import com.example.demo.model.Anggotakeluarga;
 import com.example.demo.service.IAnggotaService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:8080")
 @RequestMapping("/api/anggota")
 public class AnggotaController {
 	
@@ -43,5 +43,17 @@ public class AnggotaController {
 	public Anggotakeluarga deleteAnggota(@PathVariable int id) {
 		return anggotaService.deleteAnggota(id);
 	}
+	
+	@GetMapping("/getAnggotaById/{id}")
+	public Anggotakeluarga getAnggotaById(@PathVariable int id){
+		return anggotaService.getAnggotaById(id);
+	}
+	
+	@GetMapping("/getAnggotaByIdKK/{id_kk}")
+	public List<Anggotakeluarga> getAnggotaByIdKK(@PathVariable String id_kk) {
+		return anggotaService.getAnggotaByIdKK(id_kk);
+	}
+	
+	
 
 }

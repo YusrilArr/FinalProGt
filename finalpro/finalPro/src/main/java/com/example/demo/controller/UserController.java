@@ -17,7 +17,7 @@ import com.example.demo.model.User;
 import com.example.demo.service.IUserService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:8080")
 @RequestMapping("/api/user")
 public class UserController {
 	
@@ -42,6 +42,11 @@ public class UserController {
 	@DeleteMapping("/delete_user/{id}")
 	public User deleteUser(@PathVariable int id) {
 		return userService.deleteUser(id);
+	}
+	
+	@PostMapping("/getUser")
+	public User getUser(@RequestBody User user) {
+		return userService.getUser(user.getEmail(), user.getPassword());
 	}
 
 }

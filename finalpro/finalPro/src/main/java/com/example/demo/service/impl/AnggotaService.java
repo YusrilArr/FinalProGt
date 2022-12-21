@@ -39,4 +39,19 @@ public class AnggotaService implements IAnggotaService {
 		return anggotakeluargaRepo.deleteAnggota(id);
 	}
 
+
+	@Override
+	public Anggotakeluarga getAnggotaById(int id) {
+		// TODO Auto-generated method stub
+		return anggotakeluargaRepo.getAnggotaById(id);
+	}
+
+	@Override
+	public List<Anggotakeluarga> getAnggotaByIdKK(String id_kk) {
+		// TODO Auto-generated method stub
+		return anggotakeluargaRepo.getAnggotaByIdKK(id_kk);
+	}
+
+	
+
 }

@@ -9,5 +9,6 @@ public interface IUserService {
 	public List<User> getAllUser();
 	public User updateUser(int id, User user);
 	public User deleteUser(int id);
+	public User getUser(String email, String password);
 
 }

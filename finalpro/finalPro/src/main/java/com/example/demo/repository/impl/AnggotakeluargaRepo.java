@@ -54,4 +54,28 @@ public class AnggotakeluargaRepo implements IAnggotakeluargaRepo {
 		return result;
 	}
 
+
+	@Override
+	public Anggotakeluarga getAnggotaById(int id) {
+		// TODO Auto-generated method stub
+		String query = "SELECT * FROM tb_anggota_keluarga WHERE id = ?";
+		return jdbcTemplate.queryForObject(query, new BeanPropertyRowMapper<>(Anggotakeluarga.class), id);
+	}
+
+	@Override
+	public List<Anggotakeluarga> getAnggotaByIdKK(String id_kk) {
+		// TODO Auto-generated method stub
+		String query = "SELECT * FROM tb_anggota_keluarga WHERE id_kk = ?";
+		
+		return jdbcTemplate.query(query, new BeanPropertyRowMapper<>(Anggotakeluarga.class), id_kk);
+	}
+
+	@Override
+	public Anggotakeluarga updateAnggotaById(int id, Anggotakeluarga anggotakeluarga) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
 }

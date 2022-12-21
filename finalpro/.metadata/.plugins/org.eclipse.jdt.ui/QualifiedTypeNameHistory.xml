@@ -29,4 +29,5 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.example.demo.service.IKartuService"/>
     <fullyQualifiedTypeName name="com.example.demo.model.Kartukeluarga"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
 </qualifiedTypeNameHistroy>

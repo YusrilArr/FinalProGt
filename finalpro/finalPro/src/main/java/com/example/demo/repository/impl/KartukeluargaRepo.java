@@ -59,4 +59,11 @@ public class KartukeluargaRepo implements IKartukeluargaRepo {
 
 	}
 
+	@Override
+	public Kartukeluarga getKK(int id) {
+		// TODO Auto-generated method stub
+		String query = "SELECT * FROM tb_kartu_keluarga WHERE id = ?";
+		return jdbcTemplate.queryForObject(query, new BeanPropertyRowMapper<>(Kartukeluarga.class), id);
+	}
+
 }

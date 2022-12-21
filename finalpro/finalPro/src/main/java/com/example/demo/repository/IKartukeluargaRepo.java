@@ -11,5 +11,6 @@ public interface IKartukeluargaRepo {
 	public List<Kartukeluarga> getAllKartu();
 	public Kartukeluarga updateKartu(int id, Kartukeluarga kartukeluarga);
 	public Kartukeluarga deleteKartu(int id);
+	public Kartukeluarga getKK(int id);
 
 }

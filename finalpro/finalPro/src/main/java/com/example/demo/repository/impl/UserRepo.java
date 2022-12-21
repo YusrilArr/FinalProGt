@@ -54,4 +54,12 @@ public class UserRepo implements IUserRepo {
 		return result;
 	}
 
+	@Override
+	public User getUser(String email, String password) {
+		// TODO Auto-generated method stub
+		String query = "SELECT * FROM tb_user WHERE email = ? AND password = ?";
+		return jdbcTemplate.queryForObject(query, new BeanPropertyRowMapper<>(User.class), email, password);
+		
+	}
+
 }

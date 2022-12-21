@@ -22,6 +22,7 @@ public class Anggotakeluarga {
 	private String pendidikan;
 	private String tanggal_lahir;
 	private String tempat_lahir;
+	
 	public long getId() {
 		return id;
 	}

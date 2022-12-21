@@ -41,6 +41,12 @@ public class KartuService implements IKartuService {
 		return kartukeluargaRepo.deleteKartu(id);
 	}
 
+	@Override
+	public Kartukeluarga getKK(int id) {
+		// TODO Auto-generated method stub
+		return kartukeluargaRepo.getKK(id);
+	}
+
 	
 
 }

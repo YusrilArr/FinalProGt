@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,10 +19,14 @@ public class Kartukeluarga {
 	private String kabupaten_kota;
 	private String kecamatan;
 	private String kode_pos;
+	
+	@Column(unique = true)
 	private String nomor_kk;
+	
 	private String provinsi;
 	private String rt;
 	private String rw;
+	
 	public long getId() {
 		return id;
 	}
